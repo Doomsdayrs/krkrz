@@ -1,27 +1,27 @@
-# デバッグオプション一覧
-作成中。  
-順次列挙予定。
+# Debug option list
+making. 
+Will be listed sequentially.
 
 ### TVP\_TEXT\_READ\_ANSI\_MBCS
-テキストをShift_JISとして読み込みます。
-デフォルトは未定義でUTF-8として読み込まれます。
+Read text as Shift_JIS.
+The default is undefined and loaded as UTF-8.
 
 ### TVP\_TOUCH\_DISABLE
-Window.enableTouchをfalseとします。
-デフォルトは未定義でタッチデバイスがありマルチタッチが有効な環境では、trueとなります。
+Set Window.enableTouch to false.
+The default is true in an environment where touch devices are not defined and multi-touch is enabled.
 
 ### TVP_START_UP_SCRIPT_NAME
-初期読み込みスクリプト名を指定します。
-デフォルトは未定義でstartup.tjsを読み込みます。
+Specify the initial load script name.
+The default is undefined and loads startup.tjs.
 
 ### TJS\_64BIT\_OS
-64bit環境かどうかを切り分けるために内部で使用されています。
+It is used internally to determine whether it is a 64-bit environment.
 
 ### ENABLE_DEBUGGER
-デバッギ機能を持つかどうかを指定します。
-デバッガを使ってデバッグする時に有効にしてビルドします。
+Specify whether to have the debugging function.
+Enable and build when debugging with a debugger.
 
-    // 以下未整理
+    // below
     TJS_TEXT_OUT_CRLF
     TJS_SUPPORT_VCL
     TJS_HOST_IS_BIG_ENDIAN
@@ -50,7 +50,7 @@ Window.enableTouchをfalseとします。
     TVP_FORCE_BILINEAR
     TVP_TRANS_SHOW_FPS
     
-    // 以下リリースビルド時有効なもの
+    // Valid for the following release builds
     TJS_TEXT_OUT_CRLF
     TJS_JP_LOCALIZED
     TJS_DEBUG_DUMP_STRING

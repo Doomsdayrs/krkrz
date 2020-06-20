@@ -1,6 +1,6 @@
-VCのコマンドプロンプトを起動し、次のコマンドを実行する。
+Start the VC command prompt and execute the following command.
 MIDL IRendererBufferAccess.idl
 MIDL IRendererBufferVideo.idl
 
-いくつかファイルが生成されるので、_i.cと.h ファイルを1つ上のフォルダへコピーする。
-本来は、vcのプロジェクトを編集し、カスタムビルドでMDILコマンドを実行させるようにした方が良い。
+Some files will be generated, so copy the _i.c and .h files to the folder above.
+Originally, it is better to edit the vc project and execute the MDIL command with a custom build.

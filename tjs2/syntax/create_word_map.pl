@@ -2,7 +2,7 @@ $input_file = "dp_wordtable.txt";
 
 open FH, $input_file or die;
 
-;# 単語ファイルをすべて読み込む
+;# Read all word files
 
 %words = ();
 
@@ -15,7 +15,7 @@ while($line = <FH>)
 	}
 }
 
-;# 単語を辞書順にソート、木を switch 文で構成する
+;# Words are sorted lexicographically, tree is composed of switch statements
 
 sub gen
 {
@@ -29,13 +29,13 @@ sub gen
 
 	if($#names == 0 && $names[0] eq "\b")
 	{
-		;# 選択が一つしかない、かつ末端
+		;# There is only one choice, and the end
 		($v, $tok) = split("\t", $list{"\b"});
 		return "${padding} if(!TJS_iswalpha(InputPointer[$level])) ".
 			"{ InputPointer += $level; yylex->val = $v; return $tok; }\n"
 	}
 
-	;# 最初の一文字を取得
+	;# Get the first character
 
 	$fc = '';
 	%newlist = ();
@@ -59,7 +59,7 @@ sub gen
 			{
 				if($fc eq "\b")
 				{
-					;# 末端
+					;# end
 					$deflist .= "${padding}default:\n";
 					($v, $tok) = split("\t", $list{"\b"});
 					$deflist .= "${padding} if(!TJS_iswalpha(InputPointer[$level])) ".
@@ -88,7 +88,7 @@ sub gen
 	{
 		if($fc eq "\b")
 		{
-			;# 末端
+			;# 譛ｫ遶ｯ
 			$deflist .= "${padding}default:\n";
 			($v, $tok) = split("\t", $list{"\b"});
 			$deflist .= "${padding} InputPointer += $level; yylex->val = $v; return $tok;\n";

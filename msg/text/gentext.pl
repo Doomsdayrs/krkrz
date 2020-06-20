@@ -1,5 +1,5 @@
 ﻿
-# メッセージ類のヘッダーファイルなどを生成します。
+# Generate header files for messages.
 use utf8;
 use Win32::OLE qw(in with);
 use Win32::OLE::Const 'Microsoft Office .* Object Library';
